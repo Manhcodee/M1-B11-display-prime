@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        const numbers = parseInt(prompt("nhap so luong so nguyen to"));
+        let N = 2;
+        //kiem tra so nguyen to
+        function isPrime(n) {
+            if(n <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(n) ; i++) {
+                if (n % 2 === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        for (let count = 0; count < numbers ; N++) {
+            if (isPrime(N)) {
+                document.write(N + '</br>');
+                count++
+            }
+        }
+    </script>
+</body>
+</html>
